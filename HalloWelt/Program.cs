@@ -25,6 +25,49 @@ namespace HalloWelt
             //Console.WriteLine("Hallo Welt");
             #endregion
 
+            #region Variablen
+            //// Datentyp Name;
+            //// Datentyp Name = Startwert;
+
+            //int zahl1;          // Deklaration: "Ab diesem Zeitpunkt existiert diese Variable"
+            //int zahl2 = 10;     // Initialisierung: "Variable existiert und hat einen Startwert"
+            //int z1, z2, z3;     // 3 Integer-Variablen
+            //int z4 = 5, z5 = 10, z6 = 20;
+
+            //// Alternative: var - Schlüsselwort
+            //var x = 12.5; // var => Compiler entscheidet anhand der Zuweisung, welcher Datentyp es wird
+
+            //zahl1 = 5;
+            //zahl2 = 10;
+            //int zahl3 = zahl1 + zahl2;
+            #endregion
+
+            #region Konvertieren
+            //Console.WriteLine("Bitte geben Sie eine Zahl ein:");
+            //string eingabe = Console.ReadLine();
+            //Console.WriteLine("Ihre Eingabe war: " + eingabe);
+
+            //// Implizite Konvertieren
+            //int zahl1 = 5;   // Int32
+            //long zahl2 = 10; // Int64
+
+            //zahl2 = zahl1;   // Implizites Konvertieren: Der kleinere Wertebereich passt jederzeit in den größeren Wertebereich hinein
+            //double gleitkommazahl = zahl1;
+
+            //zahl2 = 10;     // technisch gesehen gültig für Int32
+            //                // zahl1 = gleitkommazahl;
+
+            //// Explizites Konvertieren
+            //// Klasse Convert beinhaltet alle wichtigen Konvertierungsfunktionen
+            //zahl1 = Convert.ToInt32(zahl2);
+            //// Variante 2
+            //// zahl1 = Int32.Parse("123");
+
+            //// Mini-Übung:
+            //// Konsolenprogramm: 2 Zahlen einlesen
+            //// Summe ausgeben 
+            #endregion
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
