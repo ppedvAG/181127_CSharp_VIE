@@ -8,6 +8,19 @@ namespace HalloWelt
 {
     class Program
     {
+
+        enum Wochentage
+        {
+            Montag,
+            Dienstag,
+            Mittwoch,
+            Donnerstag,
+            Freitag,
+            Samstag,
+            Sonntag
+        }
+
+
         // Einstiegspunkt in das Konsolenprogramm
         static void Main(string[] args)
         {
@@ -148,6 +161,77 @@ namespace HalloWelt
             // |, &, ||, &&, ^ (XOR) 
             #endregion
 
+            #region IF und Switch
+            //// If
+            //int zahl1 = 7;
+
+            ////if (zahl1 > 5)
+            ////{
+            ////    Console.WriteLine("größer");
+            ////}
+            ////else if(zahl1 == 5)
+            ////    Console.WriteLine("exakt 5");
+            ////else
+            ////{
+            ////    Console.WriteLine("kleiner");
+            ////}
+
+            //if (zahl1 == 1)
+            //    ;
+            //else if (zahl1 == 2)
+            //    if (true)
+            //        ;
+            //    else
+            //        ;
+            //else if (zahl1 == 3)
+            //    ;
+            //else if (zahl1 == 4)
+            //    ;
+            //else if (zahl1 == 5)
+            //    ;
+
+            //switch (zahl1)
+            //{
+            //    case 1:
+            //        ;
+            //        break;
+            //    case 2:
+            //        ;
+            //        break;
+            //    case 3:
+            //    case 4:
+            //    case 5:
+            //        ;
+            //        break;
+            //    default:
+            //        ;
+            //        break;
+            //} 
+            #endregion
+
+            #region Enum und Switch
+            //Wochentage heute = Wochentage.Dienstag;
+            //// Switch + TAB + TAB  ... variable eingeben + ENTER
+            //switch (heute)
+            //{
+            //    case Wochentage.Montag:
+            //        break;
+            //    case Wochentage.Dienstag:
+            //        break;
+            //    case Wochentage.Mittwoch:
+            //        break;
+            //    case Wochentage.Donnerstag:
+            //        break;
+            //    case Wochentage.Freitag:
+            //        break;
+            //    case Wochentage.Samstag:
+            //        break;
+            //    case Wochentage.Sonntag:
+            //        break;
+            //    default:
+            //        break;
+            //} 
+            #endregion
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
