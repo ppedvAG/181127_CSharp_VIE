@@ -277,6 +277,24 @@ namespace HalloWelt
             //string text = (zahl1 > 10) ? "größer" : "kleiner"; 
             #endregion
 
+            #region Null Coalescing Operator
+            //// ?? 
+
+            //// .NET 2.0 Nullable-ValueTypes
+            //int? alter = null;
+            //int meineZahl = 10;
+
+            //// alter = meineZahl; // kein problem
+            //// meineZahl = alter; // problem, da null ungültig für Int32
+
+            ////if (alter == null)
+            ////    meineZahl = 0;
+            ////else
+            ////    meineZahl = Convert.ToInt32(alter);
+
+            ////                ?? Alternative, falls der wert "null" ist
+            //meineZahl = alter ?? 0; 
+            #endregion
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
