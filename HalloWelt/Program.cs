@@ -335,20 +335,48 @@ namespace HalloWelt
             //    Console.WriteLine("Ungleich"); 
             #endregion
 
-            //MachEtwas();
-            //MachEtwas();
-            //MachEtwas();
-            //MachEtwas();
-            //MachEtwas();
+            #region Arrays
+            //int zahl = 12;
+            //int[] zahlen = new int[10]; // 10 Stück -> 0...9
+            //zahlen[0] = 12;
+            //zahlen[1] = 7; // ...
+            //Console.WriteLine(zahlen[0]);
 
-            //int zahl1 = Verdoppeln(5);
-            //int zahl2 = Verdoppeln(50);
-            //int zahl3 = Verdoppeln(500);
+            //// Alternative Schreibweisen: (Compiler-Magie)
+            //int[] zahlen2 = new int[] { 12, 6, 3, 6, 8, 9 };
+            //int[] zahlen3 = { 12, 6, 3, 6, 8, 9 }; 
+            #endregion
 
-            // Übergabe per ref bei wertetypen
-            int zahl1 = 5;
-            VerdoppelDieReferenz(ref zahl1);
-            Console.WriteLine(zahl1);
+            #region Methoden und Parameter
+            ////MachEtwas();
+            ////MachEtwas();
+            ////MachEtwas();
+            ////MachEtwas();
+            ////MachEtwas();
+
+            ////int zahl1 = Verdoppeln(5);
+            ////int zahl2 = Verdoppeln(50);
+            ////int zahl3 = Verdoppeln(500);
+
+            //// Übergabe per ref bei wertetypen
+            //int zahl1 = 5;
+            //VerdoppelDieReferenz(ref zahl1);
+            //Console.WriteLine(zahl1);
+
+            //Addieren(5, 10);
+            //Addieren(5, 10, 15);
+            //Addieren(5, 5, 5, 5, 5, 5, 5, 5, 5);
+            //Addieren(5, 5, 5, 5, 5, 5, 5);
+            //Addieren(5, 5, 5, 5, 5, 5, 5,9,9,9,9,9,9,9,9,9);
+            //Demo("hallo Welt", 12);
+            //Demo(new int[] { 12, 4, 6, 7 }, 12,12.5);
+
+            //OptionalDemo();
+            //OptionalDemo(12);
+
+            //bool sinnDesLebens = false;
+            //int wert = BerechneEtwas(out sinnDesLebens); 
+            #endregion
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
@@ -377,6 +405,60 @@ namespace HalloWelt
         public static void VerdoppelDieReferenz(ref int eingabe)
         {
             eingabe = eingabe * 2;
+        }
+
+        // Überladen von Methoden
+        public static int Addieren(int z1, int z2)
+        {
+            return z1 + z2;
+        }
+        public static int Addieren(int z1, int z2,int z3)
+        {
+            return z1 + z2 +z3;
+        }
+        public static int Addieren(int z1, int z2, int z3,int z4)
+        {
+            return z1 + z2 + z3 + z4;
+        }
+
+        // params -> man kann so viele werte angeben, wie man will
+        public static int Addieren(params int[] zahlen)
+        {
+            return zahlen.Sum();
+        }
+
+        public static void Demo(params object[]alles)
+        {
+            // ...
+        }
+
+        //Optionale Parameter
+        public static void OptionalDemo(int zahl = 5)
+        {
+            // ....
+        }
+
+        // ---------------
+
+        //public static int BerechneEtwas(ref bool sinnDesLebensGefunden)
+        //{
+        //    // sinnDesLebensGefunden = true;
+        //    return 42;
+        //}
+
+        // out: erzwingt eine rückgabe über den parameter
+        // unterschied zu ref: bei ref "kann" man etwas zurückgeben bzw neu zuweisen, bei out "MUSS" man es machen
+        public static int BerechneEtwas(out bool sinnDesLebensGefunden)
+        {
+            sinnDesLebensGefunden = true;
+            return 42;
+        }
+
+        // in: "readonly ref"
+        // in -> Referenz, die aber readonly ist und nicht verändert werden kann
+        public static void ReadonlyReferenceDemo(in int zahl)
+        {
+            // zahl = 12; // kann nicht verändert werden im vergleich zu ref
         }
     }
 }
