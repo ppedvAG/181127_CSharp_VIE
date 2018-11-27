@@ -296,6 +296,47 @@ namespace HalloWelt
             //meineZahl = alter ?? 0; 
             #endregion
 
+            #region Unterschiede: Referenztypen und Wertetypen
+            //int zahl1 = 5;
+            //int zahl2 = 5;
+
+            //if(zahl1 == zahl2) // Wertevergleich
+            //    Console.WriteLine("Gleich");
+            //else
+            //    Console.WriteLine("Ungleich");
+
+            //int zahl3 = zahl2; // Wertekopie
+
+            //if (zahl3 == zahl2) // Wertevergleich
+            //    Console.WriteLine("Gleich");
+            //else
+            //    Console.WriteLine("Ungleich");
+
+            //Console.WriteLine("------------");
+
+            //object o1 = 5;
+            //object o2 = 5;
+
+            //if (o1 == o2) // Referenzvergleich
+            //    Console.WriteLine("Gleich");
+            //else
+            //    Console.WriteLine("Ungleich");
+
+            //object o3 = o2; // Referenzkopie
+
+            //if (o3 == o2) // Referenzvergleich
+            //    Console.WriteLine("Gleich");
+            //else
+            //    Console.WriteLine("Ungleich");
+
+            //// Wertevergleich bei Referenzen
+            //if (o1.Equals(o2)) // Wertevergleich
+            //    Console.WriteLine("Gleich");
+            //else
+            //    Console.WriteLine("Ungleich"); 
+            #endregion
+
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
