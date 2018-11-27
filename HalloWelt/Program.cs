@@ -233,6 +233,36 @@ namespace HalloWelt
             //} 
             #endregion
 
+            #region Schleifen
+            //// Zählergesteuert:
+            //// for(initialisierung;bedingung;aktualisierung)
+            //for (int zähler = 0; zähler < 20; zähler++)
+            //{
+            //    Console.WriteLine(zähler);
+
+            //    // continue // -> springe zum nächsten durchgang
+            //    // break    // -> beendet die schleife
+            //}
+
+            //// Bedingungsgesteuert:
+            //// while(bedinung)
+
+            //// Kopfgesteuert
+            //int z = 0;
+            //while(z < 10) // while(true) <- "Endlosschleife"
+            //{
+            //    Console.WriteLine(z);
+            //    z++;
+            //}
+            //// Fußgesteuert
+            //do
+            //{
+
+            //} while (z < 100);
+
+            //// foreach -> siehe "Arrays/List<T>" 
+            #endregion
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
