@@ -263,6 +263,21 @@ namespace HalloWelt
             //// foreach -> siehe "Arrays/List<T>" 
             #endregion
 
+            #region Tenäre Operator
+            ////string text;
+            ////int zahl1 = 5;
+
+            ////if (zahl1 > 10)
+            ////    text = "größer als 10";
+            ////else
+            ////    text = "kleiner als 10";
+
+            //int zahl1 = 5;
+            ////          = (Bedingung) ? TRUE : FALSE;
+            //string text = (zahl1 > 10) ? "größer" : "kleiner"; 
+            #endregion
+
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
