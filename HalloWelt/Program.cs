@@ -378,56 +378,56 @@ namespace HalloWelt
             //int wert = BerechneEtwas(out sinnDesLebens); 
             #endregion
 
-            //Exceptions
-
-            Console.WriteLine("Bitte geben Sie eine Zahl ein:");
-            string eingabe = Console.ReadLine();
-            int zahl1;
-
-            try
-            {
-                zahl1 = Convert.ToInt32(eingabe);
-            }
-            catch(FormatException)
-            {
-                Console.WriteLine("Bitte nur ganze Zahlen eingeben");
-                Console.ReadKey();
-                return;
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Zahl war zu groß oder zu klein");
-                Console.ReadKey();
-                return;
-            }
-            catch (Exception ex) // Exception = "Alles abfangen"
-            {
-                Console.WriteLine("Es gab einen Fehler ...");
-                Console.WriteLine(ex.Message);
-                Console.ReadKey();
-                return; // Programm beenden
-            }
-            finally
-            {
-                Console.WriteLine("Finally !!!");
-                Console.ReadKey();
-            }
-
-            //try + TAB +TAB
+            #region Exceptions
+            //Console.WriteLine("Bitte geben Sie eine Zahl ein:");
+            //string eingabe = Console.ReadLine();
+            //int zahl1;
 
             //try
             //{
+            //    zahl1 = Convert.ToInt32(eingabe);
             //}
-            //catch (Exception)
+            //catch(FormatException)
             //{
-            //    throw; // wirft den originalen fehler weiter
+            //    Console.WriteLine("Bitte nur ganze Zahlen eingeben");
+            //    Console.ReadKey();
+            //    return;
+            //}
+            //catch (OverflowException)
+            //{
+            //    Console.WriteLine("Zahl war zu groß oder zu klein");
+            //    Console.ReadKey();
+            //    return;
+            //}
+            //catch (Exception ex) // Exception = "Alles abfangen"
+            //{
+            //    Console.WriteLine("Es gab einen Fehler ...");
+            //    Console.WriteLine(ex.Message);
+            //    Console.ReadKey();
+            //    return; // Programm beenden
             //}
             //finally
             //{
-            //    // wird IMMER ausgeführt, egal ob es eine Exception gibt oder nicht
+            //    Console.WriteLine("Finally !!!");
+            //    Console.ReadKey();
             //}
 
-            Console.WriteLine($"Das Doppelte von deiner Zahl ist: {zahl1*2}");
+            ////try + TAB +TAB
+
+            ////try
+            ////{
+            ////}
+            ////catch (Exception)
+            ////{
+            ////    throw; // wirft den originalen fehler weiter
+            ////}
+            ////finally
+            ////{
+            ////    // wird IMMER ausgeführt, egal ob es eine Exception gibt oder nicht
+            ////}
+
+            //Console.WriteLine($"Das Doppelte von deiner Zahl ist: {zahl1*2}"); 
+            #endregion
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
