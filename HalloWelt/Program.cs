@@ -68,6 +68,19 @@ namespace HalloWelt
             //// Summe ausgeben 
             #endregion
 
+            #region Zeichenketten
+            //string text = "Hallo Welt";
+            //string text2 = text + "--- Demo";
+            //int zahl1 = 5, zahl2 = 10, ergebnis = 15;
+
+            //// Stringverkettung
+            //Console.WriteLine("Die Summe von " + zahl1 + " und " + zahl2 + " ist " + (zahl1 + zahl2));
+            //// String.Format
+            //Console.WriteLine("Die Summe von {0} und {1} ist {2}",zahl1,zahl2,ergebnis);
+            //// C# 6 - String-Interpolation
+            //Console.WriteLine($"Die Summe von {zahl1} und {zahl2} ist {zahl1 + zahl2}"); 
+            #endregion
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
