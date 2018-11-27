@@ -81,6 +81,73 @@ namespace HalloWelt
             //Console.WriteLine($"Die Summe von {zahl1} und {zahl2} ist {zahl1 + zahl2}"); 
             #endregion
 
+            #region Operatoren
+            // Arithmetische Operatoren
+            // +,-,*,/,%    +=, -=,*=, /= , ++, --
+
+            //int zahl1 = 5;
+            //zahl1 = zahl1 + 1;
+            //zahl1 += 5;
+
+            //zahl1++; // increment 1
+            //zahl1--; // decrement 1
+
+            //// pre-increment    ++zahl1;
+            //// post-increment   zahl++;
+
+            //int eingabe = 10;
+
+            //int ausgabe = eingabe++; // Postincrement
+            //Console.WriteLine(eingabe);
+            //Console.WriteLine(ausgabe);
+
+            //eingabe = 10;
+            //ausgabe = ++eingabe; // Preincrement
+            //Console.WriteLine(eingabe);
+            //Console.WriteLine(ausgabe);
+
+            //eingabe = 50;
+            //int zahlX = eingabe++ + ++eingabe; // Ratespiel ;)
+            //Console.WriteLine(zahlX);
+
+
+            // BitOperatoren
+            // | -> OR
+            // & -> AND
+            // ~ -> Invertieren
+            // ^ -> XOR
+
+            //int zahl1 = 4; // 0100
+            //int zahl2 = 2; // 0010
+
+            //int ergebnis = zahl1 & zahl2; // 0110
+
+            //// C# 7
+            //int binär = 0b_0000_1111;
+            //int hex = 0x_FF00FF;
+
+            //int zehnmillionen = 10000000;
+            //int zehnmillionen2 = 10_000_000;
+            //int hundertdreiundzwanzig = 1________2_________________________3;
+            //Console.WriteLine(hundertdreiundzwanzig);
+
+
+            //short zahl1 = short.MaxValue;
+            //Console.WriteLine(zahl1);
+
+            //checked // Prüft auf Überläufe
+            //{
+            //    zahl1 += 1;
+            //}
+            //Console.WriteLine(zahl1);
+
+            // Vergleichsoperatoren
+            // <,>,<=,>=,==,!=, !
+
+            // Veknüpfungsoperatoren
+            // |, &, ||, &&, ^ (XOR) 
+            #endregion
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
