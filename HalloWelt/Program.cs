@@ -20,7 +20,6 @@ namespace HalloWelt
             Sonntag
         }
 
-
         // Einstiegspunkt in das Konsolenprogramm
         static void Main(string[] args)
         {
@@ -336,9 +335,48 @@ namespace HalloWelt
             //    Console.WriteLine("Ungleich"); 
             #endregion
 
+            //MachEtwas();
+            //MachEtwas();
+            //MachEtwas();
+            //MachEtwas();
+            //MachEtwas();
+
+            //int zahl1 = Verdoppeln(5);
+            //int zahl2 = Verdoppeln(50);
+            //int zahl3 = Verdoppeln(500);
+
+            // Übergabe per ref bei wertetypen
+            int zahl1 = 5;
+            VerdoppelDieReferenz(ref zahl1);
+            Console.WriteLine(zahl1);
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
+        }
+
+
+        // Methodensignatur:
+        // gültigkeitsspezifizierer rückgabetyp Name (parametern...)
+        // void == "subprozedur"
+        // int/etc == "function"
+
+        // Paramter: Standardfall: übergabe per wert
+        // ref => übergabe per referenz
+
+        public static void MachEtwas()
+        {
+            // Logik
+            Console.WriteLine("Ich mache etwas .....");
+        }
+
+        public static int Verdoppeln(int eingabe)
+        {
+            return eingabe * 2; // return -> liefert das Ergebnis zurück
+        }
+
+        public static void VerdoppelDieReferenz(ref int eingabe)
+        {
+            eingabe = eingabe * 2;
         }
     }
 }
