@@ -8,6 +8,14 @@ namespace OOP
 {
     class Program
     {
+        //static Program()
+        //{
+        //    GEHEIMZAHL = 123;
+        //    NURAUSLESEN = 123;
+        //}
+        private const int GEHEIMZAHL = 99;              // Muss direkt den Wert haben, man kann nichts mehr zuweisen
+        private static readonly int NURAUSLESEN = 999;  // Darf höchstens im Konstruktor gesetzt werden, sonst nirgends
+
         static void Main(string[] args)
         {
             #region Klassen
@@ -118,10 +126,67 @@ namespace OOP
             //}
             #endregion
 
+            // Konto k1 = new Konto();
 
+            JugendKonto j1 = new JugendKonto();
+            Girokonto g1 = new Girokonto();
+
+            Konto[] alleKonten = new Konto[10];
+            alleKonten[0] = j1;
+            alleKonten[1] = g1;
+            // ....
+
+            try
+            {
+                j1.Kontostand = 40;
+                j1.Abheben(20);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            #region Static Class und Konstante
+            ////Taschenrechner t = new Taschenrechner();
+            //int ergebnis = Taschenrechner.Addieren(12, 12);
+            //Console.WriteLine(Taschenrechner.PI);
+
+            //int zahl1 = 5;
+            //zahl1 = 10;
+
+            ////GEHEIMZAHL = 12;
+            ////NURAUSLESEN = 12345; 
+            #endregion
+
+            SuperMegaGroßeKlasse abc = new SuperMegaGroßeKlasse();
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
     }
+
+    // static class:
+    // 1) es dürfen NUR static member in der Klasse sein
+    // 2) es kann keine Instanz der Klasse erstellt werden
+    //static class Taschenrechner
+    //{
+    //    // static Konstruktor: Wird aufgerufen, wenn das erste mal im Programm ein Feature der Klasse genutzt wird
+    //    static Taschenrechner()
+    //    {
+    //        PI = 3.14;
+    //    }
+
+    //    // static member: property/feld/methode ...
+    //    public readonly static int E = 123;
+    //    public const double PI = 3.14; // Konstanten sind automatisch static
+    //    // static -> Methode ist über die Klasse aufrufbar und -nicht- über eine Instanz der Klasse
+    //    public static int Addieren(int z1, int z2)
+    //    {
+    //        return z1 + z2;
+    //    }
+    //    public static int Subtrahieren(int z1, int z2)
+    //    {
+    //        return z1 - z2;
+    //    }
+    //}
 }

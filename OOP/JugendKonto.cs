@@ -2,9 +2,11 @@
 
 namespace OOP
 {
-    public class JugendKonto : Konto
+    // sealed -> Verhindert, das andere Klassen von dieser Klasse erben können
+    public sealed class JugendKonto : Konto
     {
-        public override void Abheben(decimal Betrag)
+        // sealed override -> Verhindert ein erneutes Überschreiben
+        public sealed override void Abheben(decimal Betrag)
         {
             if (Betrag > 50)
                 throw new ArgumentException("Sie dürfen nicht mehr als 50€ auf einmal abheben.");
@@ -14,6 +16,12 @@ namespace OOP
 
             base.Abheben(Betrag);
         }
+
     }
+
+    //public class NeugeborenesKonto : JugendKonto
+    //{
+
+    //}
 
 }

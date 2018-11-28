@@ -99,4 +99,17 @@ namespace OOP
 
 
     }
+
+    partial class SuperMegaGroßeKlasse
+    {
+        public void DasIstEineMethode()
+        {
+
+        }
+
+        public void LALALALAL()
+        {
+
+        }
+    }
 }
