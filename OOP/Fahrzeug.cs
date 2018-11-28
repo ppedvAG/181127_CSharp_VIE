@@ -54,7 +54,7 @@ namespace OOP
         #region Variante 2 : Konstruktorverkettung
         public Fahrzeug() : this("abcde") { }
         public Fahrzeug(string Kennzeichen) : this(Kennzeichen, 100_000) { }
-        public Fahrzeug(string Kennzeichen, int Kilometerstand) :this(Kennzeichen,Kilometerstand,100){}
+        public Fahrzeug(string Kennzeichen, int Kilometerstand) : this(Kennzeichen,Kilometerstand,100){}
         public Fahrzeug(string Kennzeichen, int Kilometerstand, int Geschwindigkeit)
         {
             this.Kennzeichen = Kennzeichen;
