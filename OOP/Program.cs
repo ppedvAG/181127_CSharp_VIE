@@ -10,6 +10,32 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+            //Person p;           // Deklaration: ist noch null
+            //p = new Person();   // Instanziierung: Personen-Objekt wird erstellt
+
+            //p.vorname = "Max";
+            //p.nachname = "Mustermann";
+            ////p.alter = 255;
+            //p.kontostand = -21312312312345;
+
+            ////p.AlterSetzen(200);
+            ////Console.WriteLine(p.AlterAuslesen());
+
+            //p.Alter = 100;
+            //Console.WriteLine(p.Alter);
+
+            Fahrzeug audi = new Fahrzeug();
+            audi.Geschwindigkeit = 200;
+
+            Console.WriteLine(audi.Kilometerstand);
+            audi.Fahren(5);
+            Console.WriteLine(audi.Kilometerstand);
+
+            audi = null; // "Löschen"
+            GC.Collect();
+            //GC.Collect(0, GCCollectionMode.Forced, true);
+
+            
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
