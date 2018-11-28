@@ -93,5 +93,10 @@ namespace OOP
 
             Kilometerstand += Stunden * Geschwindigkeit;
         }
+
+
+
+
+
     }
 }

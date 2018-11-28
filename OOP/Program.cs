@@ -48,73 +48,76 @@ namespace OOP
             //Console.WriteLine(l.Kilometerstand); 
             #endregion
 
-            Grafik g1 = new Grafik("Rot");
-            Kreis k1 = new Kreis(20, "Gelb");
-            Rechteck r1 = new Rechteck(10, 10, "Grün");
+            #region Polymorphie
+            //Grafik g1 = new Grafik("Rot");
+            //Kreis k1 = new Kreis(20, "Gelb");
+            //Rechteck r1 = new Rechteck(10, 10, "Grün");
 
-            g1.Zeichnen();
-            k1.Zeichnen();
-            r1.Zeichnen();
+            //g1.Zeichnen();
+            //k1.Zeichnen();
+            //r1.Zeichnen();
 
-            // Polymorphie - Vielgestaltigkeit
-            // Objekte der Subklasse können genauso verwendet werden wie Objekte der Basisklasse
-            Console.WriteLine("------------------------ Überschreiben -------------------------");
+            //// Polymorphie - Vielgestaltigkeit
+            //// Objekte der Subklasse können genauso verwendet werden wie Objekte der Basisklasse
+            //Console.WriteLine("------------------------ Überschreiben -------------------------");
 
-            Grafik g2 = new Kreis(50,"Orange");
-            g2.Zeichnen();
+            //Grafik g2 = new Kreis(50,"Orange");
+            //g2.Zeichnen();
 
-            // Wir wissen, dass in g2 ein Kreis drinnen ist
+            //// Wir wissen, dass in g2 ein Kreis drinnen ist
 
-            // Variante 1: Casten
-            Kreis k2 = (Kreis)g2;
-            k2.Farbe = "Violett";
+            //// Variante 1: Casten
+            //Kreis k2 = (Kreis)g2;
+            //k2.Farbe = "Violett";
 
-            g2.Zeichnen();
+            //g2.Zeichnen();
 
-            Console.WriteLine("------------------------ Verstecken -------------------------");
+            //Console.WriteLine("------------------------ Verstecken -------------------------");
 
-            Grafik g3 = new Rechteck(20, 50, "Pink");
-            g3.Zeichnen();
+            //Grafik g3 = new Rechteck(20, 50, "Pink");
+            //g3.Zeichnen();
 
-            // Variante 2: as - Operator
-            Rechteck r3 = g3 as Rechteck;
-            r3.Höhe = 99;
+            //// Variante 2: as - Operator
+            //Rechteck r3 = g3 as Rechteck;
+            //r3.Höhe = 99;
 
-            r3.Zeichnen();
+            //r3.Zeichnen();
 
-            // Unterschied zwischen Casten und "as"-Operator
-            // Kreis k5 = (Kreis)g3; // in wirklichkeit ein Rechteck
-            // Bei einem falschen Cast gibt es eine "InvalidCastException"
-            Kreis k6 = g3 as Kreis; // in wirklichkeit ein Rechteck
-            // Bei einem Fehler: null (=> KEINE EXCEPTION)
+            //// Unterschied zwischen Casten und "as"-Operator
+            //// Kreis k5 = (Kreis)g3; // in wirklichkeit ein Rechteck
+            //// Bei einem falschen Cast gibt es eine "InvalidCastException"
+            //Kreis k6 = g3 as Kreis; // in wirklichkeit ein Rechteck
+            //// Bei einem Fehler: null (=> KEINE EXCEPTION)
 
-            // as - Anwendungsfall
-            Kreis k7 = g3 as Kreis ?? new Kreis(10, "Transparent");
-            // -> Versuche g3 zu einem Kreis zu machen, wenn das nicht geht, mach einen neuen Kreis
+            //// as - Anwendungsfall
+            //Kreis k7 = g3 as Kreis ?? new Kreis(10, "Transparent");
+            //// -> Versuche g3 zu einem Kreis zu machen, wenn das nicht geht, mach einen neuen Kreis
 
-            Console.WriteLine("------------------------ Anwendungsfall -------------------------");
+            //Console.WriteLine("------------------------ Anwendungsfall -------------------------");
 
-            Grafik[] alleGrafiken = new Grafik[3];
-            alleGrafiken[0] = k1;
-            alleGrafiken[1] = r1;
-            alleGrafiken[2] = g1;
-            // ... 
+            //Grafik[] alleGrafiken = new Grafik[3];
+            //alleGrafiken[0] = k1;
+            //alleGrafiken[1] = r1;
+            //alleGrafiken[2] = g1;
+            //// ... 
 
-            foreach (var item in alleGrafiken)
-            {
-                item.Zeichnen();
-                // is - operator
-                if(item is Kreis)
-                {
-                    // Kreislogik
-                }
-                else if (item is Rechteck)
-                {
-                    // Recktecklogik mit Casten oder "as" - operator
-                    Rechteck temp = (Rechteck)item;
-                    temp.Zeichnen();
-                }
-            }
+            //foreach (var item in alleGrafiken)
+            //{
+            //    item.Zeichnen();
+            //    // is - operator
+            //    if(item is Kreis)
+            //    {
+            //        // Kreislogik
+            //    }
+            //    else if (item is Rechteck)
+            //    {
+            //        // Recktecklogik mit Casten oder "as" - operator
+            //        Rechteck temp = (Rechteck)item;
+            //        temp.Zeichnen();
+            //    }
+            //}
+            #endregion
+
 
 
             Console.WriteLine("---ENDE---");
