@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schnittstellen", "Schnittst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatenUndEreignisse", "DelegatenUndEreignisse\DelegatenUndEreignisse.csproj", "{1A1CB97B-D6FB-44A3-961F-22B00C2F1B33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloForms", "HalloForms\HalloForms.csproj", "{1823090D-F5AB-4EDB-B25B-4C4391E9701C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloWPF", "HalloWPF\HalloWPF.csproj", "{A57849DC-D6CF-4839-A5CD-FAB48D24F609}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{1A1CB97B-D6FB-44A3-961F-22B00C2F1B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1CB97B-D6FB-44A3-961F-22B00C2F1B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1CB97B-D6FB-44A3-961F-22B00C2F1B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1823090D-F5AB-4EDB-B25B-4C4391E9701C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1823090D-F5AB-4EDB-B25B-4C4391E9701C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1823090D-F5AB-4EDB-B25B-4C4391E9701C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1823090D-F5AB-4EDB-B25B-4C4391E9701C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
