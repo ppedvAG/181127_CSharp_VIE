@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloForms", "HalloForms\Ha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloWPF", "HalloWPF\HalloWPF.csproj", "{A57849DC-D6CF-4839-A5CD-FAB48D24F609}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloEditor", "HalloEditor\HalloEditor.csproj", "{F8B16040-5FB6-458D-978F-49A44B7C1E25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A57849DC-D6CF-4839-A5CD-FAB48D24F609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8B16040-5FB6-458D-978F-49A44B7C1E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8B16040-5FB6-458D-978F-49A44B7C1E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8B16040-5FB6-458D-978F-49A44B7C1E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8B16040-5FB6-458D-978F-49A44B7C1E25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
