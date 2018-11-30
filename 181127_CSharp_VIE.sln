@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeineFeatures", "MeineFeatu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLSerialisierung", "XMLSerialisierung\XMLSerialisierung.csproj", "{737D781B-0841-4A8D-9146-7831F9DD9A8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFMediaElement", "WPFMediaElement\WPFMediaElement.csproj", "{0B4C0485-4D07-4D29-8381-3D598193AEDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{737D781B-0841-4A8D-9146-7831F9DD9A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{737D781B-0841-4A8D-9146-7831F9DD9A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{737D781B-0841-4A8D-9146-7831F9DD9A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4C0485-4D07-4D29-8381-3D598193AEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4C0485-4D07-4D29-8381-3D598193AEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4C0485-4D07-4D29-8381-3D598193AEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C0485-4D07-4D29-8381-3D598193AEDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
