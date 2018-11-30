@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -133,6 +134,7 @@ namespace KomplexeDatentypen
             // Console.WriteLine(g.Satz);
             #endregion
 
+            #region Eigene Liste
             // Übung:
 
             // Eure eigene Liste nachbauen
@@ -146,34 +148,137 @@ namespace KomplexeDatentypen
             // indexer2 -> schreibt das ELement in die Liste rein (zb meineListe[123] = "neuesElement")
 
 
-            MeineListe<string> l = new MeineListe<string>();
-            l.Add("Hallo");
-            l.Add("Welt");
-            l.Add("!");
+            //MeineListe<string> l = new MeineListe<string>();
+            //l.Add("Hallo");
+            //l.Add("Welt");
+            //l.Add("!");
 
-            l.Remove();
-            l.Add("!!!");
+            //l.Remove();
+            //l.Add("!!!");
 
-            l.Remove(1); // Welt
+            //l.Remove(1); // Welt
 
-            l.Add("lalalal");
-            Console.WriteLine(l[1]);
+            //l.Add("lalalal");
+            //Console.WriteLine(l[1]);
 
-            l[55] = "asd" ;
+            //l[55] = "asd" ;
 
-            try
+            //try
+            //{
+            //    l[100] = "asd";
+            //    l[200] = "asd";
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //} 
+            #endregion
+
+            #region Lambda - Ausdrücke
+            //// Action a = Button_Click;
+
+            //// Anonyme Methode
+            ////Action a = () => Console.WriteLine("Mach Was");
+            ////Action a2 = () =>
+            ////{
+            ////    Console.WriteLine("Mach Was");
+            ////    Console.WriteLine("Mach Was");
+            ////    Console.WriteLine("Mach Was");
+            ////}; 
+            #endregion
+
+            // LINQ - Language INntegrated Queries
+            List<Person> personenListe = new List<Person>
             {
-                l[100] = "asd";
-                l[200] = "asd";
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+                new Person{Vorname="Tom",Nachname="Ate",Alter=10,Kontostand=100},
+                new Person{Vorname="Anna",Nachname="Nass",Alter=20,Kontostand=200},
+                new Person{Vorname="Peter",Nachname="Silie",Alter=30,Kontostand=-300},
+                new Person{Vorname="Franz",Nachname="Ose",Alter=40,Kontostand=4000},
+                new Person{Vorname="Martha",Nachname="Pfahl",Alter=50,Kontostand=-5000},
+                new Person{Vorname="Klara",Nachname="Fall",Alter=60,Kontostand=600000},
+                new Person{Vorname="Frank N",Nachname="Stein",Alter=70,Kontostand=-777700},
+                new Person{Vorname="Anna",Nachname="Bolika",Alter=80,Kontostand=100000},
+                new Person{Vorname="Rainer",Nachname="Zufall",Alter=90,Kontostand=-100000},
+                new Person{Vorname="Bill",Nachname="Dung",Alter=100,Kontostand=0},
+            };
+
+            // Aufgabe: 
+            // Erstelle eine Liste mit allen Vornamen
+            // Variante Liste:
+
+            //List<string> alleVornamen = new List<string>();
+            //foreach (var item in personenListe)
+            //{
+            //    alleVornamen.Add(item.Vorname);
+            //}
+
+            // Aufgabe 2: Liste mit allen VOrnamen von Personen, die einen negativen Kontostand haben
+            //List<string> alleVornamenMitNegativemKontostand = new List<string>();
+            //foreach (var item in personenListe)
+            //{
+            //    if(item.Kontostand < 0)
+            //        alleVornamenMitNegativemKontostand.Add(item.Vorname);
+            //}
+
+            // Aufgabe 3 : Liste mit allen VOrnamen von Personen, die einen negativen Kontostand haben -> nach Alter sortiert
+
+            //------------------
+
+            // SELECT -> Gib für jedes Element X den Wert Y zurück
+
+            // List<string> alleVornamen = personenListe.Select(PersonZuVornamenSelektor).ToList();
+            List<string> alleVornamen = personenListe.Select(x => x.Vorname).ToList();
+            decimal[] alleKontostände = personenListe.Select(x => x.Kontostand).ToArray();
+
+            // durchschnittliche kontostand von allen personen ?
+            // SUM, AVARAGE, MIN, MAX
+            decimal durchschnitt = personenListe.Select(x => x.Kontostand).Average();
+            decimal durchschnitt2 = personenListe.Average(x => x.Kontostand);
+
+            // WHERE
+            var list = personenListe.Where(x => x.Kontostand < 0)
+                                    .Select(x => x.Vorname)
+                                    .ToList();
+
+            // ORDERBY , ORDERBYDESCENDING
+
+            var konten = personenListe.Where(x => x.Kontostand > 0)
+                                      .OrderBy(x => x.Alter)
+                                      .ToArray();
+
+            // Ausgabe: ToList(), ToArray()
+            // FIRST, LAST
+            Person steinreich = personenListe.OrderByDescending(x => x.Kontostand)
+                                             .First();
+
+            
+            // Übung:
+
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }
+
+        private static string PersonZuVornamenSelektor(Person p) => p.Vorname;
+        //{
+        //    return p.Vorname;
+        //}
+
+        public int Add(int z1, int z2)
+        {
+            return z1 + z2;
+        }
+        public int Sub(int z1, int z2) => z1 - z2;
+        public int Mul(int z1, int z2) => z1 * z2;
+        public int Div(int z1, int z2) => z1 / z2;
+
+        private int myVar;
+        public int MyProperty
+        {
+            get => myVar;
+            set => myVar = value;
+        }
+
     }
 
     // Generics selber schreiben
