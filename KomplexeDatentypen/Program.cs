@@ -130,9 +130,46 @@ namespace KomplexeDatentypen
             //Console.WriteLine(g[0]);
 
             //g[2] = "kein"; 
+            // Console.WriteLine(g.Satz);
             #endregion
 
-            Console.WriteLine(g.Satz);
+            // Übung:
+
+            // Eure eigene Liste nachbauen
+            // class MeineListe mit interner string[] data...
+
+            // Features:
+            // Kontstruktor: 100 Elemente kapazität
+            // void Add()    ...
+            // void Remove() ...
+            // indexer -> gibt das Element aus der Position X zurück  (zb meineListe[0])
+            // indexer2 -> schreibt das ELement in die Liste rein (zb meineListe[123] = "neuesElement")
+
+
+            MeineListe<string> l = new MeineListe<string>();
+            l.Add("Hallo");
+            l.Add("Welt");
+            l.Add("!");
+
+            l.Remove();
+            l.Add("!!!");
+
+            l.Remove(1); // Welt
+
+            l.Add("lalalal");
+            Console.WriteLine(l[1]);
+
+            l[55] = "asd" ;
+
+            try
+            {
+                l[100] = "asd";
+                l[200] = "asd";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();

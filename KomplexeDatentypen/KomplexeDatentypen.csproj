@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Erweiterungsmethoden.cs" />
     <Compile Include="GanzerSatz.cs" />
+    <Compile Include="MeineListe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
