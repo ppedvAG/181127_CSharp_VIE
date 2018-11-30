@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using MeineFeatures;
 
 namespace KomplexeDatentypen
 {
@@ -251,9 +252,15 @@ namespace KomplexeDatentypen
             Person steinreich = personenListe.OrderByDescending(x => x.Kontostand)
                                              .First();
 
-            
-            // Übung:
 
+            // Übung:
+            // 1) Durschnittlicher Kontstand von allen Personen, die einen negativen Kontostand haben
+            // 2) Alle Personen über 50 mit positivem Kontostand sortiert nach Alter absteigend
+            // 3) Durchschnittsalter aller Personen mit einem Nachnamen länger als 5 Zeichen
+
+            //throw new DivideByZeroException();
+
+            Console.WriteLine(Taschenrechner.Add(5,5));
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
